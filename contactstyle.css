@@ -1,0 +1,93 @@
+body{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin:0;
+padding:0;
+background-color:#fff5f8;
+color:#333;
+text-align:center;
+}
+
+header{
+background-color:#ff7f9b;
+padding:20px;
+}
+
+.login{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.login a{
+text-decoration:none;
+color:rgb(50, 46, 46);
+font-weight:bold;
+}
+
+.login a:hover{
+color:#f25252;
+}
+
+header h1{
+margin:0;
+color:white;
+}
+
+nav ul{
+list-style:none;
+padding:0;
+margin:10px 0 0 0;
+}
+
+nav ul li{
+display:inline-block;
+margin:0 15px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.contact-container{
+max-width:700px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-container h2{
+color:#ff4d7a;
+margin-bottom:20px;
+}
+
+.contact-info p{
+font-size:18px;
+margin:10px 0;
+}
+
+.map{
+margin-top:20px;
+}
+
+.map-link a{
+text-decoration:none;
+color:#ff4081;
+font-weight:bold;
+}
+
+.map-link a:hover{
+color:#e91e63;
+text-decoration:underline;
+}
+
+footer{
+text-align:center;
+padding:15px;
+background-color:#ff7f9b;
+color:white;
+margin-top:40px;
+}

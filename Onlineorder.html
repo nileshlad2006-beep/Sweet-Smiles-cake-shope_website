@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Order - Sweet Smiles</title>
+<link rel="stylesheet" href="css/onlineorder.css">
+</head>
+
+<body>
+
+<header>
+ <div class="login">
+ <a href="login.html">Log In</a>
+ </div>
+<nav>
+<ul>
+<li><a href="homepage.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="Menu.html">MENU</a></li>
+<li><a href="Onlineorder.html">ORDER ONLINE</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="order-section">
+
+<h1>🧁 Sweet Smiles Online Order</h1>
+<p>Place your cake order easily — we’ll make it with love!</p>
+
+<form>
+
+<table class="order-table" align="center">
+
+<tr>
+<td>Full Name:</td>
+<td><input type="text" id="name" required></td>
+</tr>
+
+<tr>
+<td>Phone Number:</td>
+<td><input type="tel" id="phone" required></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email" id="email" required></td>
+</tr>
+
+<tr>
+<td>Select Cake:</td>
+<td>
+
+<select id="cake" onchange="calculatePrice()" required>
+
+<option value="">-- Choose Cake --</option>
+
+<option value="299">Chocolate Cake</option>
+<option value="709">Cheese Cake</option>
+<option value="450">Black Forest</option>
+<option value="350">Honey Rose</option>
+<option value="300">Pineapple Cake</option>
+<option value="345">Strawberry Cake</option>
+<option value="819">Red Velvet</option>
+<option value="550">Rose-Vanilla Cake</option>
+
+</select>
+
+</td>
+</tr>
+
+<tr>
+<td>Enter Cake Size (kg):</td>
+<td>
+<input type="number" id="kg" min="0.5" step="0.5" placeholder="Example 1 or 1.5" oninput="calculatePrice()" required>
+</td>
+</tr>
+
+<tr>
+<td>Message on Cake:</td>
+<td><input type="text" id="message"></td>
+</tr>
+
+<tr>
+<td>Delivery Address:</td>
+<td><textarea id="address" rows="4" required></textarea></td>
+</tr>
+
+<tr>
+<td>Delivery Date:</td>
+<td><input type="date" required></td>
+</tr>
+
+<tr>
+<td>Total Price:</td>
+<td>
+<input type="text" id="price" readonly placeholder="Price will appear automatically">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="text-align:center;">
+<button type="submit">Place Order</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</section>
+
+<script>
+
+function calculatePrice(){
+
+let cakePrice = document.getElementById("cake").value;
+let kg = document.getElementById("kg").value;
+
+if(cakePrice != "" && kg != "")
+{
+let total = cakePrice * kg;
+
+document.getElementById("price").value = "₹ " + total;
+}
+
+}
+
+document.querySelector("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("🎂 Order placed successfully! Thank you for choosing Sweet Smiles.");
+
+document.querySelector("form").reset();
+document.getElementById("price").value="";
+
+});
+
+</script>
+
+</body>
+</html>
