@@ -105,4 +105,8 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  img{
+    max-width:100%;
+    height: auto;
 }
